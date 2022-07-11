@@ -1,0 +1,15 @@
+#include<stdio.h> 
+#include<unistd.h> 
+#include<fcntl.h> 
+#include<stdlib.h> 
+  
+int main() 
+{ 
+char c; 
+int fd1 = open("sample.txt", O_RDONLY); 
+int fd2 = open("sample.txt", O_RDONLY); 
+read(fd1, &c, 1); 
+read(fd2, &c, 1); 
+printf("c = %c\n", c); 
+exit(0); 
+} 
